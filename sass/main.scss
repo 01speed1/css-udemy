@@ -1,0 +1,135 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// Base
+@import "base/base";
+@import "base/typography";
+@import "base/animations";
+@import "base/utilities";
+
+@import "pages/home";
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.801),
+      rgba($color-primary-dark, 0.801)
+    ),
+    url("https://tinyurl.com/r8jote5");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logoBox {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+
+  &__logo {
+    height: 35px;
+
+    &:hover {
+      animation: grow 0.5s ease;
+    }
+  }
+
+  &__textBox {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.headingPrimary {
+  color: $color-white;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+}
+
+.headingPrimaryMain {
+  display: block;
+  font-family: "Gochi Hand", cursive;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 5px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+.headingPrimarySub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 11.6px;
+
+  animation: moveInRight 1s ease-in;
+}
+
+
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 13px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all, 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.233);
+
+    &::after {
+      transform: scale(1.4, 1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.233);
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &.--animated {
+    animation: moveInDown 1s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+  }
+
+  &.--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+}
+
