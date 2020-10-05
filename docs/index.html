@@ -19,6 +19,35 @@
     <title>HoyDescansas | Relax in our hotels</title>
   </head>
   <body>
+    <div class="navigation">
+      <input class="navigation__checkbox" type="checkbox" id="naviToggle" />
+      <label for="naviToggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">About HD</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Your benfits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Popular tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header__logoBox">
         <img src="img/logo.png" alt="HoyDescansas logo" class="header__logo" />
@@ -30,8 +59,8 @@
           <span class="headingPrimary__Sub">Relax in a real dream place</span>
         </h1>
 
-        <a href="#" class="btn --white --animated">
-          discover our plans
+        <a href="#sectionTours" class="btn --white --animated">
+          Discover our plans
         </a>
       </div>
     </header>
@@ -144,7 +173,7 @@
         </div>
       </section>
 
-      <section class="sectionTours">
+      <section class="sectionTours" id="sectionTours">
         <div class="uCenterText uMarginBottomBig">
           <h2 class="headingSecondary">
             Most popular tours
@@ -178,7 +207,7 @@
                     <p class="card_priceOnly">Only</p>
                     <div class="card__priceValue">$297</div>
                   </div>
-                  <a href="#" class="btn --white">Book now!</a>
+                  <a href="#popup" class="btn --white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -208,7 +237,7 @@
                     <p class="card_priceOnly">Only</p>
                     <div class="card__priceValue">$497</div>
                   </div>
-                  <a href="#" class="btn --white">Book now!</a>
+                  <a href="#popup" class="btn --white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -239,7 +268,7 @@
                     <p class="card_priceOnly">Only</p>
                     <div class="card__priceValue">$597</div>
                   </div>
-                  <a href="#" class="btn --white">Book now!</a>
+                  <a href="#popup" class="btn --white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -391,14 +420,54 @@
             <div class="footer__navigation">
               <ul class="footer__list">
                 <li class="footer__item">
-                  <a href="#" class="footer__link"></a>
+                  <a href="#" class="footer__link">Company</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Contact us</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Carrers</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Privacy policy</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Terms</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col1Of2"></div>
+          <div class="col1Of2">
+            <div class="footer__copyright">
+              Built my <a href="#" class="footer__link">Oscar Guzman</a> for
+              HoyTrabajas TechTeam
+              <a href="#" class="footer__link">Advanced CSS and SASS</a>.
+              Copyright &copy; by JonasSchmedtmann &copy; Oscar Guzman, You 100%
+              allowed to use this webpage for both personal and commercial use,
+              but NOT to claim it as your own design. A credit to the original
+              author, Jonas Schmedtmann, is of course highly appreciated!
+            </div>
+          </div>
         </div>
       </footer>
+
+      <div class="popup" id="popup">
+        <div class="popup__content">
+          <div class="popup__left">
+            <img class="popup__img" src="https://bit.ly/3h44l1E" alt="">
+            <img class="popup__img" src="https://bit.ly/3kMO6bt" alt="">
+          </div>
+          <div class="popup__right">
+            <a href="#sectionTours" class="popup__close">&times;</a>
+            <h2 class="headingSecondary uMarginBottomMedium">Start booking now</h2>
+            <h3 class="headingTertiary uMarginBottomSmall">Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
+            <p class="popup__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse eos blanditiis adipisci vitae et. Cum mollitia enim ex quia repellat, voluptatibus, reiciendis animi minus fugit deserunt ut labore tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse eos blanditiis adipisci vitae et. Cum mollitia enim ex quia repellat, voluptatibus, reiciendis animi minus fugit deserunt ut labore tenetur!
+            </p>
+            <a href="#" class="btn --blue">Booking now</a>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- <section class="gridTest">
