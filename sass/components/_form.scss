@@ -15,6 +15,10 @@
     width: 90%;
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -48,6 +52,11 @@
   &__radioGroup {
     width: 45%;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radioLabel {
@@ -67,9 +76,8 @@
     left: 0;
     top: -4px;
 
-
     &::after {
-      content: "";
+      content: '';
       display: block;
       height: 1.3rem;
       width: 1.3rem;
@@ -80,7 +88,7 @@
       transform: translate(-50%, -50%);
       background-color: $color-primary-light;
       opacity: 0;
-      transition: opacity .2s;
+      transition: opacity 0.2s;
     }
   }
 
@@ -89,6 +97,6 @@
   }
 
   &__radioInput:checked ~ &__radioLabel &__radioButton::after {
-      opacity: 1;
+    opacity: 1;
   }
 }
